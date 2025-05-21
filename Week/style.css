@@ -1,0 +1,52 @@
+h1{
+ color: rgb(228, 104, 59);
+ font-family: sans-serif;
+}
+
+h3{
+ color: #ff9b76;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p {
+ color: rgb(255, 169, 138);
+ font-family: fantasy;
+}
+
+ul{
+    /*Type of the list pointers -- open circles, squares, etc*/
+    list-style-type: circle;
+
+    /*Using an image icon as a Bullets Images*/
+    list-style-image: url('images/pointer-icon.png');
+}
+
+ol {
+    /*Type of the list pointers -- open circles, squares, etc*/
+    list-style-type: upper-roman;
+}
+
+#menu-bar a {
+    /*remove the underline from a hyperlink*/
+    text-decoration: none;
+    background-color: aquamarine;
+    font-family: Helvetica, sans-serif;
+    font-size: larger;
+    padding: 5px;
+}
+
+/*When user hover over a -> a light color apears*/
+#menu-bar a:hover {
+    background-color: aqua;
+    color: #ffffff;
+}
+
+#menu-bar {
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+}
+
+#par {
+    padding: 10px;
+}
