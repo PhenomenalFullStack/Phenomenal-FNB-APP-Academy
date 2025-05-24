@@ -1,0 +1,270 @@
+/*Applies to the whole page*/
+body {
+    /*Removing the side, top and bottom spaces*/
+    padding: 0;
+    margin: 0;
+
+    /*Setting the page font*/
+    font-family: Helvetica;
+}
+
+/*==============================================HEADER==============================================*/
+#header {
+    /*Setting the header to be fixed at the top of the page when we scroll down*/
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 500;
+
+    /*Setting the size of the header*/
+    width: 100%;
+    height: 80px;
+    background-image: url('images/wood-bg.png');
+    background-repeat: repeat-x;
+}
+
+#header img {
+    /*help to resize our image*/
+    display: block;
+
+    /*Center the image within the parent div header*/
+    margin: auto;
+
+    height: 70%;
+    padding-top: 15px;
+}
+
+/*/*============================================TOP-TABS============================================*/
+#tabs-top {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    height: 40px;
+    background-color: darkgreen;
+}
+
+/*/*=====================================HYPERLINKS INSIDE TOP-TABS/*==============================*/
+#tabs-top a{
+    float: left;
+
+    /*allows us to set the width and height*/
+    display: block;
+
+    /*We got 3 buttons and each takes 33.33 of the screen*/
+    width: 33%;
+    height: 35px;
+
+    /*bold*/
+    font-weight: 700;
+
+    color: white;
+
+    text-align: center;
+
+    /*remove the underlines*/
+    text-decoration: none;
+
+    padding-top: 12px;
+}
+
+
+/*/*===========================================MAIN.HOME/*=========================================*/
+#main-home {
+    /*Leave a space of 120px from the top of the screen until the top of the image or content*/
+    margin-top: 120px;
+}
+
+
+/*/*=========================================BOTTOM-TABS*==========================================*/
+#tab-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    height: 40px;
+    background-color: forestgreen;
+}
+
+
+#tab-bottom a {
+    float: left;
+
+    /*allows us to set the width and height*/
+    display: block;
+
+    /*We got 2 buttons and each takes 50 of the screen*/
+    width: 50%;
+    height: 35px;
+
+    /*Bold*/
+    font-weight: 700;
+
+    color: white;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    padding-top: 12px;
+}
+
+
+/*=========================================MAIN-ANIMALS-PAGE=========================================*/
+#main {
+    /*the main will not be coverd by the header, it will stat after the header*/
+    margin-top: 119px;
+
+    /*Setting the background image for the main*/
+    background: url('images/map-blur.png');
+
+    /*Image is small so it will inlarge itself vertiacally over the y-axis*/
+    background-repeat: repeat-y;
+}
+
+#content {
+    padding-top: 1px;
+    padding-bottom: 50px;
+}
+
+
+/*=============================================INFO-BOX=============================================*/
+a.info-box {
+    /*removing the links undelines*/
+    text-decoration: none;
+
+    /*setting the background color to trasparent white using rgba*/
+    background: rgba(255, 255, 255, .8);
+
+    /*resizing the backgound*/
+    width: 90%;
+    height: 90px;
+
+    /*allows us to set the width and height*/
+    display: block;
+
+    /*centralized on the screen*/
+    margin: auto;
+
+    /*gap on to of the screen until the link and one box after*/
+    margin-top: 12px;
+
+    /*space around*/
+    padding: 1px;
+}
+
+.info-box img {
+    height: 70px;
+    margin: 10px;
+    float: left;
+}
+
+.info-box h3 {
+    padding: 0;
+    margin-bottom: 0;
+    width: 90%;
+    color: #572800;
+}
+
+.info-box p {
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    color: #131313;
+}
+
+.info-box img.right {
+    float: right;
+    margin-top: 25px;
+    height: 40px;
+}
+
+
+/*=============================================INFO-BOX-FULL=============================================*/
+#info-box-full {
+    background-color: rgba(255, 255, 255, .8);
+    width: 90%;
+    display: block;
+
+    /*center position the box in the center of the screen*/
+    margin: auto;
+
+    /*12px space on top*/
+    margin-top: 12px;
+
+    /*allround space for the box*/
+    padding: 10px;
+}
+
+#info-box-full img {
+    /*The image will always be of 100% of the width of the info-box-full*/
+    width: 100%;
+}
+
+#info-box-full h3 {
+    text-align: center;
+}
+
+
+/*=============================================WEATHER=============================================*/
+img.info-box-weather-icon {
+    height: 30px;
+
+    /*the important is for below width to not clash with the (#info-box-full img) on top*/
+    width: 30px !important;
+
+    margin: 10px;
+    float: left;
+}
+
+h1.info-box-weather-icon {
+    font-size: 55px;
+    font-weight: 200;
+    padding: 0;
+    margin: 0;
+}
+
+table {
+    width: 100%;
+}
+
+/*styling the cols*/
+td {
+    /*solid #131313 if for the lines*/
+    border-top: 1px solid #131313;
+}
+
+
+
+/*=============================================FEEDBACK=============================================*/
+input{
+    width: 100%;
+    height: 25px;
+
+    /*Setting the (top and bottom) to 12px, (left and right) to 0*/
+    margin: 12px 0;
+
+    border: 1px #131313;
+}
+
+textarea {
+    width: 100%;
+    height: 65px;
+    margin: 12px 0;
+    border: 1px #131313;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    background-color: forestgreen;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 12px 0;
+    padding: 8px 0;
+}
