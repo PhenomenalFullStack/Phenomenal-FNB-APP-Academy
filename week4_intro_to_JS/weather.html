@@ -24,35 +24,6 @@
 
     <p id="outpuText"></p>
 
-    <script>
-        function buttonPressed() {
-            var weatherSelected = document.getElementById("weather").value;
-            var advice;
-
-            switch(weatherSelected) {
-                case "sunny":
-                    advice = "Wear you sun classed";
-                    break;
-                case "windy":
-                    advice = "Wear a jacket";
-                    break;
-                        break;
-                case "rainy":
-                    advice = "Wear a rainy coat and bring your umbrella";
-                    break;
-                        break;
-                case "snowy":
-                    advice = "Dress warely.";
-                    break;
-                        break;
-                case "cloudy":
-                    advice = "Carry a jacket. It might rain.";
-                    break;
-            }
-            document.getElementById("outpuText").innerHTML = "Weather advice: " +  advice;
-        }
-        
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

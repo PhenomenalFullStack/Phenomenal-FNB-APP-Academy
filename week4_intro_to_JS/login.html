@@ -24,25 +24,6 @@
         <a href="#" onclick="verifyUser()">Log in</a>
     </div>
 
-    <script>
-        function verifyUser() {
-            var unsername = document.getElementById("usernameInput").value;
-            var password = document.getElementById("passwordInput").value;
-
-            // calling the below checkUserCredentials
-            checkUserCredentials(unsername, password)
-        }
-
-        function checkUserCredentials(username, password) {
-            var systemUserName = "user";
-            var systemPassword = "12345";
-
-            if(username == systemUserName && password == systemPassword) {
-                document.getElementById("message").innerHTML = "Success: Logged in"
-            } else {
-                document.getElementById("message").innerHTML = "Invalid! Check your credentials and try again"
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
