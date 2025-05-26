@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Numbers and Strings</title>
+</head>
+<body>
+    <!--1.-->
+    <p id="par"></p>
+    <p id="par1"></p>
+    <p id="par2"></p>
+
+    <!--2.-->
+    <p id="par3"></p>
+
+    <!--3. Avoiding error conversions-->
+    <p id="par3"></p>
+
+    <script>
+        // string numbers works for the following operations -, *, /
+        // 1. but is does not work for +
+        var text1 = "40";
+        var text2 = "5";
+        document.getElementById("par").innerHTML = text1 - text2;
+        document.getElementById("par1").innerHTML = text1 * text2;
+        document.getElementById("par2").innerHTML = text1 / text2;
+
+        // 2. but string numbers does not work for +
+        document.getElementById("par3").innerHTML = "It will concactinate the following number: " + (text1 + text2);
+
+        // 3. Avoiding error conversions
+        var text3 = "ten";
+        var text4 = "5";
+        if(isNaN(text3) || isNaN(text4)) {
+            document.getElementById("par3").innerHTML = "You have not entered a number, try again";
+        } else {
+            document.getElementById("par3").innerHTML = text3 / text4;
+        }
+    </script>
+</body>
+</html>

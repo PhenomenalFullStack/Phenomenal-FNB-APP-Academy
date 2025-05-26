@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Home</title>
+</head>
+<body>
+    <!--1.-->
+    <h1 id="heading1"></h1>
+    <p id="paragraph1"></p>
+    <p id="paragraph2"></p>
+    <p id="paragraph3"></p>
+    <p id="paragraph4"></p>
+
+    <!--2.-->
+    <p id="paragraph5"></p>
+    <p id="paragraph6"></p>
+    <p id="paragraph7"></p>
+
+    <!--3.-->
+    <p id="paragraph8"></p>
+
+    <!--4.-->
+    <!--onClick JS property-->
+    <h1 onclick = "innerHTML=('You have currently clicked the button')" >Click here</h1>
+
+    <!--Changing text when the text is pressed using the if conditional-->
+    <h1 onclick="if(this.innerHTML=='JavaScipt'){this.innerHTML='Is awesome'} else{this.innerHTML='JavaScipt'}">JavaScipt</h1>
+
+    <!--4.-->
+    <!--Using Funtion-->
+    <!--Changing text when the text is pressed using the if conditional-->
+    <h1 id="press" onclick="changeText()">Login</h1>
+
+    <!--5.-->
+    <p id="addition" ></p>
+
+    <!--6.-->
+    <p id="multiply"></p>
+
+    <!--7.-->
+    <p id="sumFun"></p>
+
+
+    <!--Script text-->
+    <script>
+        // 1. Using elements
+        // find the element with Id = heading1, and set its innerHtml text to text provided.
+        document.getElementById("heading1").innerHTML = ("This is JavaScipt");
+        // text
+        document.getElementById("paragraph1").innerHTML = ("I am having fun");
+        document.getElementById("paragraph2").innerHTML = ("5+6");
+        // numbers
+        document.getElementById("paragraph3").innerHTML = (5+6);
+        // text + numbers
+        document.getElementById("paragraph4").innerHTML = ("Number: " + 6);
+
+
+        // 2. Variables (text or number) -> var
+        // declaring a variable
+        var text1;
+        var text2;
+
+        // assigning a value
+        text1 = "Hello everyone ";
+        text2 = "I love learning JS";
+
+        // declaring a variable and assigning a value
+        var text3 = "I will study until: " + (3+5);
+
+        // displaying in the Html elements using their id's
+        document.getElementById("paragraph5").innerHTML = (text1);
+        document.getElementById("paragraph6").innerHTML = (text1 + text2);
+        document.getElementById("paragraph7").innerHTML = (text3);
+
+
+        // 3. Conditionals 
+        var userInputpassword = "007";
+        var actualPassword = "07";
+
+        var successful = "Success: You are logged in";
+        var error = "INVALID! LOGIN DETAILS, Try again";
+
+        if(userInputpassword == actualPassword) {
+            document.getElementById("paragraph8").innerHTML = (successful);
+        } else {
+            document.getElementById("paragraph8").innerHTML = (error);
+        }
+
+
+        // 4. Functions -> Group of intructions giving feedback.
+        function changeText() {
+            if(document.getElementById("press").innerHTML =='Login'){
+                document.getElementById("press").innerHTML ='Success Logged In'
+            } else {
+                document.getElementById("press").innerHTML ='Login'
+            }
+        }
+
+
+        // 5. Function Parameters 
+        function addNumber(num1, num2) {
+            document.getElementById("addition").innerHTML = num1 + num2;
+        }
+        addNumber(8, 6)
+
+
+        // 6. Function return values
+        function multplyNumbers(num1, num2) {
+            return num1 * num2;
+        }
+        function display() {
+            document.getElementById("multiply").innerHTML = multplyNumbers(3, 3);
+        }
+        display()
+
+
+        // 7. Varibale scope -> visible and usable
+        // Global -> visible and usable everywhere.
+        function sumFunction() {
+            var sumVariable = 100;
+
+            // sumVariable is visible and usable only in this function.
+            document.getElementById("sumFun").innerHTML = sumVariable;
+        }
+        sumFunction()
+
+
+    </script>
+</body>
+</html>

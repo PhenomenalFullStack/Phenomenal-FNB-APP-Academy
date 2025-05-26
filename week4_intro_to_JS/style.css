@@ -1,0 +1,17 @@
+a {
+    float: left;
+    display: block;
+
+    width: 10%;
+    height: 15px;
+
+    background-color: aqua;
+    padding: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+}
+
+.button a:hover{
+    color:red ;
+}
